@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    transition: background 0.4s,
+                height 0.4s;
+}
+
+.header.scrolled {
+    background: white;
+    height: 60px;
+}
+
+.logo {
+    color: #0000005f;
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: #0000005f;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.4s;
+}
+
+.nav-links a:hover {
+    color: #0000008f;
+}
+
+.burger-container {
+    display: none;
+}
+
+.section {
+    padding: 100px 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home {
+    background: #afd7e1;
+    min-height: 100vh;
+}
+
+.download {
+    background: #fdb5ca;
+    min-height: 100vh;
+}
+
+.features {
+    background: #fee195;
+    flex-direction: column;
+}
+
+.reviews {
+    background: #d0e7b7;
+}
+
+.earn {
+    height: 500px;
+    background: url(imgs/earn.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+}
+
+.title2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    color: #0000005f;
+}
+   
+.subtitle2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #0000005f;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background: #0000001f;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 15px;
+    transition: background 0.4s;
+}
+
+.button:hover {
+    background: #0000003f;
+}
+
+.input {
+    width: 300px;
+    padding: 10px 15px;
+    outline: none;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    color: #0000008f;
+    transition: padding-left 0.4s,
+                box-shadow 0.4s;
+}
+
+.input:focus {
+    padding-left: 20px;
+    box-shadow: 0 0 5px #0000003f;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.w50 {
+    width: 50%;
+}
+
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt50 {
+    margin-top: 30px;
+}
+
+.px10p {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.bold {
+    font-weight: 600;
+    color: black;
+}
+
+.svg {
+    width: 600px;
+    padding: 50px;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features .wrap {
+    justify-content: center;
+}
+
+.box-feature {
+    max-width: 300px;
+    text-align: center;
+    margin: 25px;
+}
+
+.box-review {
+    background: #0000001f;
+    width: 250px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin: 15px;
+}
+
+.icon-feature {
+    font-size: 40px;
+    color: #dfc683;
+}
+
+.star {
+    color: #ffa500;
+}
+
+.earn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.animation {
+    line-height: initial;
+    overflow: hidden;
+    width: calc(100%);
+    display: flex;
+    justify-content: center;
+}
+
+.animation span {
+    position: relative;  
+    font-size: 7vw; 
+    display: inline-block;
+    transition: transform 0.4s;
+}
+
+.animation span.start {
+    transform: translateY(-100%);
+}
+
+.animation span::after {
+    content: attr(data-text);
+    position: absolute;
+    width: calc(100% + 100px);
+    left: 0;
+    top: 100%;
+}
+
+.earn .button {
+    margin-top: 30px;
+}
+
+.footer {
+    height: 80px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.footer .subtitle {
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+@media (max-width: 1366px) {
+
+    .section {
+        padding: 100px 5%;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    .section ,
+    .wrapper {
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .w50 {
+        width: 100%;
+    }
+
+    .home,
+    .reviews,
+    .wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .features {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 100px 10%;
+        justify-content: center;
+    }
+
+    .header {
+        padding: 0 10%;
+    }
+
+    .reviews .wrap {
+        margin-top: 50px;
+        justify-content: center;
+    }
+
+    .column {
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    
+    .section {
+        padding: 100px 10%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .burger-container {
+        display: block;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .burger,
+    .burger::before,
+    .burger::after {
+        width: 100%;
+        height: 3px;
+        background: #0000008f;
+        position: absolute;  
+    }
+
+    .burger {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: background 0.4s;
+    }
+
+    .burger.active {
+        background: transparent;
+    }
+
+    .burger::before {
+        content: "";
+        bottom: 8px;
+        transition: bottom 0.4s,
+                    transform 0.4s;
+    }
+
+    .burger.active::before {
+        bottom: 0;
+        transform: rotate(-45deg);
+    }
+
+    .burger::after {
+        content: "";
+        top: 8px;
+        transition: top 0.4s,
+                    transform 0.4s;
+    }
+
+    .burger.active::after {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .nav-links {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        justify-content: center;
+        background: white;
+        padding-left: 30px;
+        transform: translateX(100%);
+        transition: transform 0.4s;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 30px;
+    }
+    
+    .svg {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .input {
+        width: 90%;
+    }
+
+    .box-review {
+        width: 90%;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    .nav-links {
+        width: 80%;
+    }
+}
