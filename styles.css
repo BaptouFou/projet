@@ -16,6 +16,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 150px;
+    z-index: 2;
     transition: background 0.4s,
                 height 0.4s;
 }
@@ -54,6 +55,7 @@
 
 .burger-container {
     display: none;
+    cursor: pointer;
 }
 
 .section {
@@ -61,6 +63,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .home {
@@ -216,6 +219,7 @@
     padding: 15px 25px;
     border-radius: 5px;
     margin: 15px;
+    overflow: hidden;
 }
 
 .icon-feature {
@@ -285,6 +289,10 @@
     .section {
         padding: 100px 5%;
     }
+
+    .header {
+        padding: 0 5%;
+    }
 }
 
 @media (max-width: 1280px) {
@@ -334,9 +342,6 @@
     .section {
         padding: 100px 10%;
     }
-}
-
-@media (max-width: 768px) {
 
     .burger-container {
         display: block;
@@ -408,9 +413,24 @@
         transform: translateX(0);
     }
 
+    .nav-links li {
+        opacity: 0;
+        transform: translateX(300px);
+        transition: opacity 0.4s,
+                    transform 0.4s;
+    }
+
+    .nav-links li.visible { 
+        opacity: 1;
+        transform: translateX(0);
+    }
+
     .nav-links a {
         font-size: 30px;
     }
+}
+
+@media (max-width: 768px) {
     
     .svg {
         width: 100%;
